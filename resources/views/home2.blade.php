@@ -8,15 +8,7 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Je bent ingelogd!<br>
-
-                    <a href="./delete-account">Account verwijderen</a>
+                    Deze pagina heeft geen middleware!
                 </div>
             </div>
         </div>

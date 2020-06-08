@@ -19,13 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware(['auth', '2fa']);
+Route::get('/home2', 'HomeController@index2')->name('home2');
 
 Route::get('/complete-registration', 'Auth\RegisterController@completeRegistration');
+
+Route::get('/delete-account', 'HomeController@delete')->middleware(['auth', '2fa']);
 
 Route::post('/2fa', function () {
     return redirect(URL()->previous());

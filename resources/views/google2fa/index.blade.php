@@ -5,14 +5,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Register</div>
+                    <div class="panel-heading">Registreren</div>
 
                     <div class="panel-body">
                         <form class="form-horizontal" method="POST" action="{{ route('2fa') }}">
                             {{ csrf_field() }}
 
                             <div class="form-group">
-                                <label for="one_time_password" class="col-md-4 control-label">One Time Password</label>
+                                <label for="one_time_password" class="col-md-4 control-label">Google Authenticator code</label>
 
                                 <div class="col-md-6">
                                     <input id="one_time_password" type="number" class="form-control" name="one_time_password" required autofocus>
